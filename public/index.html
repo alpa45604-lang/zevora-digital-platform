@@ -7,7 +7,7 @@
 <style>
 :root{color-scheme:dark;--bg:#08090d;--panel:#11141c;--muted:#9aa3b2;--accent:#d8ff63;--line:#ffffff18}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:#f5f6f8;font-family:Inter,Arial,system-ui,sans-serif}header{height:72px;padding:0 clamp(18px,5vw,72px);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:#090b10;position:sticky;top:0;z-index:5} .brand{font-size:25px;font-weight:900;letter-spacing:.22em;color:var(--accent)}.tag{font-size:10px;letter-spacing:.2em;color:#aab2bf}
-main{max-width:1440px;margin:auto;padding:0 clamp(16px,5vw,72px)}.intro{padding:64px 0 32px}.eyebrow{color:var(--accent);font-size:11px;letter-spacing:.24em;font-weight:700}.intro h1{font-size:clamp(32px,6vw,64px);line-height:1.02;max-width:760px;margin:16px 0}.intro p{color:var(--muted);max-width:650px;line-height:1.7;font-size:14px}.searchbar{display:flex;gap:10px;margin:28px 0 22px;max-width:650px}.searchbar input{flex:1;min-width:0;background:#141822;border:1px solid var(--line);border-radius:10px;padding:15px;color:white;font-size:14px;outline:none}.searchbar input:focus{border-color:var(--accent)}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}.filters button{background:#141822;color:#cbd0d9;border:1px solid var(--line);border-radius:999px;padding:9px 15px;font-size:12px;cursor:pointer}.filters button.active{background:var(--accent);color:#111;border-color:var(--accent);font-weight:800}.sectionhead{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:24px;margin-top:12px}.sectionhead h2{font-size:15px;letter-spacing:.14em}.count{font-size:11px;color:var(--muted)}.empty{border:1px solid var(--line);background:linear-gradient(135deg,#141923,#0d1017);border-radius:16px;padding:42px 24px;text-align:center;margin:14px 0 80px}.empty .symbol{font-size:34px;color:var(--accent)}.empty h3{font-size:18px;margin:14px 0 8px}.empty p{font-size:13px;line-height:1.7;color:var(--muted);max-width:540px;margin:auto}.footer{border-top:1px solid var(--line);padding:24px clamp(16px,5vw,72px);color:#747e8e;font-size:11px;text-align:center}
+main{max-width:1440px;margin:auto;padding:0 clamp(16px,5vw,72px)}.intro{padding:64px 0 32px}.eyebrow{color:var(--accent);font-size:11px;letter-spacing:.24em;font-weight:700}.intro h1{font-size:clamp(32px,6vw,64px);line-height:1.02;max-width:760px;margin:16px 0}.intro p{color:var(--muted);max-width:650px;line-height:1.7;font-size:14px}.searchbar{display:flex;gap:10px;margin:28px 0 22px;max-width:650px}.searchbar input{flex:1;min-width:0;background:#141822;border:1px solid var(--line);border-radius:10px;padding:15px;color:white;font-size:14px;outline:none}.searchbar input:focus{border-color:var(--accent)}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}.filters button{background:#141822;color:#cbd0d9;border:1px solid var(--line);border-radius:999px;padding:9px 15px;font-size:12px;cursor:pointer}.filters button.active{background:var(--accent);color:#111;border-color:var(--accent);font-weight:800}.sectionhead{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:24px;margin-top:12px}.sectionhead h2{font-size:15px;letter-spacing:.14em}.count{font-size:11px;color:var(--muted)}.catalog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:18px;margin:18px 0 70px}.film-card{background:var(--panel);border:1px solid var(--line);border-radius:13px;overflow:hidden;cursor:pointer;transition:transform .18s,border-color .18s}.film-card:hover{transform:translateY(-3px);border-color:#d8ff6380}.film-card img{width:100%;aspect-ratio:2/3;object-fit:cover;display:block;background:#1b202a}.film-card .film-info{padding:12px}.film-card strong{display:block;font-size:13px;line-height:1.4}.film-card small{display:block;color:var(--muted);font-size:10px;margin-top:7px;line-height:1.5}.film-card .license{color:var(--accent)}.empty{border:1px solid var(--line);background:linear-gradient(135deg,#141923,#0d1017);border-radius:16px;padding:42px 24px;text-align:center;margin:14px 0 80px}.empty .symbol{font-size:34px;color:var(--accent)}.empty h3{font-size:18px;margin:14px 0 8px}.empty p{font-size:13px;line-height:1.7;color:var(--muted);max-width:540px;margin:auto}.footer{border-top:1px solid var(--line);padding:24px clamp(16px,5vw,72px);color:#747e8e;font-size:11px;text-align:center}
 .player{display:none;position:fixed;inset:0;background:#000;z-index:20;align-items:center;justify-content:center}.player.open{display:flex}.player video{width:100%;height:100%;object-fit:contain;background:#000}.playerbar{position:absolute;top:14px;right:14px;display:flex;gap:8px;align-items:center}.playerbar button,.playerbar select{background:#171b22ed;color:#fff;border:1px solid #ffffff35;border-radius:9px;padding:11px 13px;font-size:14px}.playerbar button{cursor:pointer}.playerbar select{max-width:130px}.playererror{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(90%,440px);text-align:center;color:#d2d6df;line-height:1.6;display:none}.playererror.show{display:block}
 @media(max-width:600px){header{height:60px}.tag{display:none}.intro{padding:42px 0 24px}.intro h1{font-size:38px}.empty{padding:32px 18px}.playerbar{top:auto;bottom:16px;right:10px}.playerbar button,.playerbar select{padding:12px}.sectionhead{align-items:flex-end}}
 </style>
@@ -24,7 +24,7 @@ main{max-width:1440px;margin:auto;padding:0 clamp(16px,5vw,72px)}.intro{padding:
 </section>
 <section>
 <div class="sectionhead"><h2>KEŞFET</h2><span class="count" id="count">0 doğrulanmış yapım</span></div>
-<div class="empty" id="empty"><div class="symbol">✦</div><h3>Katalog hazırlanıyor</h3><p>Henüz yayın hakkı ve doğrudan oynatma dosyası birlikte doğrulanmış bir yapım bulunmuyor. Hakları belirsiz içerikleri ekleyip seni yanıltmayacağız.</p></div>
+<div class="catalog-grid" id="catalogGrid"></div><div class="empty" id="empty"><div class="symbol">✦</div><h3>Katalog hazırlanıyor</h3><p>Henüz bu kategoriye uygun doğrulanmış yapım bulunmuyor. Hakları belirsiz içerikleri ekleyip seni yanıltmayacağız.</p></div>
 </section>
 </main>
 <footer class="footer">ZEVORA · Bağımsız dijital sinema platformu</footer>
@@ -34,28 +34,49 @@ main{max-width:1440px;margin:auto;padding:0 clamp(16px,5vw,72px)}.intro{padding:
 <div class="playererror" id="playererror">Bu yapım için şu anda oynatılabilir bir video dosyası bulunamadı.</div>
 </div>
 <script>
-/* Kataloğa yalnızca yayın/yeniden dağıtım hakkı ve doğrudan medya dosyası doğrulanan kayıtlar eklenir.
-   sources örneği: [{label:"1080p",url:"https://.../video.mp4"},{label:"720p",url:"https://.../video.mp4"}] */
-const catalog = [];
+/* Kayıtlar lisans ve doğrudan medya kaynağı kontrol edilerek eklenir. */
+const catalog = [{
+ id:"paywall-2018",kind:"documentary",title:"Paywall: The Business of Scholarship",
+ year:2018,runtime:"64 dk 48 sn",language:"İngilizce",genres:["Belgesel","Bilim","Teknoloji"],
+ synopsis:"Bilimsel yayıncılık endüstrisini, akademik bilgiye erişimi ve açık erişim hareketini inceler.",
+ poster:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Paywall_documentary_poster.jpg",
+ sources:[{label:"Orijinal dosya · OGG",url:"https://commons.wikimedia.org/wiki/Special:Redirect/file/2018_documentary_%27Paywall_%E2%80%93_The_Business_of_Scholarship%27.ogg",type:"video/ogg"}],
+ license:"Creative Commons Attribution 4.0 (CC BY 4.0)",
+ credit:"Jason Schmitt / Paywall film ekibi",
+ rightsUrl:"https://commons.wikimedia.org/wiki/File:2018_documentary_%27Paywall_%E2%80%93_The_Business_of_Scholarship%27.ogg",
+ licenseUrl:"https://creativecommons.org/licenses/by/4.0/"
+}];
 const search=document.getElementById('search'),empty=document.getElementById('empty'),count=document.getElementById('count');
 let activeKind='all';
+const grid=document.getElementById('catalogGrid');
 function render(){
  const term=search.value.trim().toLocaleLowerCase('tr');
  const rows=catalog.filter(x=>(activeKind==='all'||x.kind===activeKind)&&(!term||(x.title+' '+(x.year||'')+' '+(x.genres||[]).join(' ')).toLocaleLowerCase('tr').includes(term)));
  count.textContent=rows.length+' doğrulanmış yapım';
+ grid.innerHTML='';
+ rows.forEach(item=>{
+  const card=document.createElement('article');card.className='film-card';card.tabIndex=0;card.setAttribute('role','button');card.setAttribute('aria-label',item.title+' filmini oynat');
+  const img=document.createElement('img');img.src=item.poster;img.alt=item.title+' afişi';img.loading='lazy';img.onerror=()=>{img.style.display='none'};
+  const info=document.createElement('div');info.className='film-info';
+  const title=document.createElement('strong');title.textContent=item.title;
+  const meta=document.createElement('small');meta.textContent=item.year+' · '+item.runtime+' · '+item.language;
+  const lic=document.createElement('small');lic.className='license';lic.textContent=item.license;
+  info.append(title,meta,lic);card.append(img,info);
+  card.addEventListener('click',()=>playTitle(item));card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();playTitle(item)}});
+  grid.append(card);
+ });
  empty.style.display=rows.length?'none':'block';
 }
-document.querySelectorAll('#filters button').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('#filters button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');activeKind=btn.dataset.kind;render()}));
-search.addEventListener('input',render);
 const player=document.getElementById('player'),video=document.getElementById('video'),quality=document.getElementById('quality'),playererror=document.getElementById('playererror');
 function playTitle(item){
  const sources=(item.sources||[]).filter(s=>s.url);
  if(!sources.length){return}
  player.classList.add('open');playererror.classList.remove('show');video.pause();video.removeAttribute('src');video.innerHTML='';
- sources.forEach((s,i)=>{const el=document.createElement('source');el.src=s.url;el.dataset.label=s.label||('Kaynak '+(i+1));video.appendChild(el)});
+ sources.forEach((s,i)=>{const el=document.createElement('source');el.src=s.url;if(s.type)el.type=s.type;el.dataset.label=s.label||('Kaynak '+(i+1));video.appendChild(el)});
  quality.innerHTML='';sources.forEach((s,i)=>{const opt=document.createElement('option');opt.value=String(i);opt.textContent=s.label||('Kaynak '+(i+1));quality.appendChild(opt)});
- quality.hidden=sources.length<2;video.load();video.play().catch(()=>{playererror.classList.add('show')});
+ quality.hidden=sources.length<2;video.load();video.play().catch(()=>{playererror.textContent='Video başlatılamadı. Dosya biçimi veya kaynak erişimi bu tarayıcıda desteklenmiyor olabilir.';playererror.classList.add('show')});
 }
+video.addEventListener('error',()=>{if(player.classList.contains('open'))playererror.classList.add('show')});
 function closePlayer(){video.pause();video.removeAttribute('src');video.innerHTML='';video.load();player.classList.remove('open')}
 quality.addEventListener('change',()=>{const t=video.currentTime,wasPlaying=!video.paused;const source=video.querySelectorAll('source')[Number(quality.value)];if(!source)return;video.src=source.src;video.load();video.currentTime=t;if(wasPlaying)video.play().catch(()=>{})});
 document.getElementById('close').addEventListener('click',closePlayer);
