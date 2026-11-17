@@ -8,7 +8,7 @@
 :root{color-scheme:dark;--bg:#08090d;--panel:#11141c;--muted:#9aa3b2;--accent:#d8ff63;--line:#ffffff18}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:#f5f6f8;font-family:Inter,Arial,system-ui,sans-serif}header{height:72px;padding:0 clamp(18px,5vw,72px);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:#090b10;position:sticky;top:0;z-index:5} .brand{font-size:25px;font-weight:900;letter-spacing:.22em;color:var(--accent)}.tag{font-size:10px;letter-spacing:.2em;color:#aab2bf}
 main{max-width:1440px;margin:auto;padding:0 clamp(16px,5vw,72px)}.intro{padding:64px 0 32px}.eyebrow{color:var(--accent);font-size:11px;letter-spacing:.24em;font-weight:700}.intro h1{font-size:clamp(32px,6vw,64px);line-height:1.02;max-width:760px;margin:16px 0}.intro p{color:var(--muted);max-width:650px;line-height:1.7;font-size:14px}.searchbar{display:flex;gap:10px;margin:28px 0 22px;max-width:650px}.searchbar input{flex:1;min-width:0;background:#141822;border:1px solid var(--line);border-radius:10px;padding:15px;color:white;font-size:14px;outline:none}.searchbar input:focus{border-color:var(--accent)}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}.filters button{background:#141822;color:#cbd0d9;border:1px solid var(--line);border-radius:999px;padding:9px 15px;font-size:12px;cursor:pointer}.filters button.active{background:var(--accent);color:#111;border-color:var(--accent);font-weight:800}.sectionhead{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:24px;margin-top:12px}.sectionhead h2{font-size:15px;letter-spacing:.14em}.count{font-size:11px;color:var(--muted)}.catalog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:18px;margin:18px 0 70px}.film-card{background:var(--panel);border:1px solid var(--line);border-radius:13px;overflow:hidden;cursor:pointer;transition:transform .18s,border-color .18s}.film-card:hover{transform:translateY(-3px);border-color:#d8ff6380}.film-card img{width:100%;aspect-ratio:2/3;object-fit:cover;display:block;background:#1b202a}.film-card .film-info{padding:12px}.film-card strong{display:block;font-size:13px;line-height:1.4}.film-card small{display:block;color:var(--muted);font-size:10px;margin-top:7px;line-height:1.5}.film-card .license{color:var(--accent)}.empty{border:1px solid var(--line);background:linear-gradient(135deg,#141923,#0d1017);border-radius:16px;padding:42px 24px;text-align:center;margin:14px 0 80px}.empty .symbol{font-size:34px;color:var(--accent)}.empty h3{font-size:18px;margin:14px 0 8px}.empty p{font-size:13px;line-height:1.7;color:var(--muted);max-width:540px;margin:auto}.footer{border-top:1px solid var(--line);padding:24px clamp(16px,5vw,72px);color:#747e8e;font-size:11px;text-align:center}
-.player{display:none;position:fixed;inset:0;background:#000;z-index:20;align-items:center;justify-content:center}.player.open{display:flex}.player video{width:100%;height:100%;object-fit:contain;background:#000}.playerbar{position:absolute;top:14px;right:14px;display:flex;gap:8px;align-items:center}.playerbar button,.playerbar select{background:#171b22ed;color:#fff;border:1px solid #ffffff35;border-radius:9px;padding:11px 13px;font-size:14px}.playerbar button{cursor:pointer}.playerbar select{max-width:130px}.playererror{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(90%,440px);text-align:center;color:#d2d6df;line-height:1.6;display:none}.playererror.show{display:block}
+.player{display:none;position:fixed;inset:0;background:#000;z-index:20;align-items:center;justify-content:center}.player.open{display:flex}.player video{width:100%;height:100%;object-fit:contain;background:#000}.playerbar{position:absolute;top:14px;right:14px;display:flex;gap:8px;align-items:center}.playerbar button,.playerbar select{background:#171b22ed;color:#fff;border:1px solid #ffffff35;border-radius:9px;padding:11px 13px;font-size:14px}.playerbar button{cursor:pointer}.playerbar select{max-width:130px}.playererror{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(92%,760px);max-height:84vh;overflow:auto;padding:26px;background:#0d1119;border:1px solid #ffffff2b;border-radius:18px;text-align:left;color:#d2d6df;line-height:1.65;display:none;box-shadow:0 24px 80px #000b}.playererror.show{display:block}.playererror h3{font-size:22px;margin:0 0 8px;color:#fff}.playererror p{font-size:13px;color:#b7c0ce;margin:8px 0}.pending-meta{font-size:12px;color:#a5afbf;margin:10px 0}.pending-links{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}.pending-links a{display:inline-block;padding:10px 13px;border:1px solid #ffffff30;border-radius:9px;color:var(--accent);font-size:12px;text-decoration:none}.pending-links a:hover{background:#d8ff6315}.card-status{color:#ffda83!important}
 @media(max-width:600px){header{height:60px}.tag{display:none}.intro{padding:42px 0 24px}.intro h1{font-size:38px}.empty{padding:32px 18px}.playerbar{top:auto;bottom:16px;right:10px}.playerbar button,.playerbar select{padding:12px}.sectionhead{align-items:flex-end}}
 </style>
 </head>
@@ -23,7 +23,7 @@ main{max-width:1440px;margin:auto;padding:0 clamp(16px,5vw,72px)}.intro{padding:
 <div class="filters" id="filters"><button class="active" data-kind="all">Tümü</button><button data-kind="film">Filmler</button><button data-kind="series">Diziler</button><button data-kind="documentary">Belgeseller</button></div>
 </section>
 <section>
-<div class="sectionhead"><h2>KEŞFET</h2><span class="count" id="count">0 doğrulanmış yapım</span></div>
+<div class="sectionhead"><h2>KEŞFET</h2><span class="count" id="count">4/200 lisansı doğrulanmış uzun yapım · 0 oynatma testi tamam</span></div>
 <div class="catalog-grid" id="catalogGrid"></div><div class="empty" id="empty"><div class="symbol">✦</div><h3>Katalog hazırlanıyor</h3><p>Henüz bu kategoriye uygun doğrulanmış yapım bulunmuyor. Hakları belirsiz içerikleri ekleyip seni yanıltmayacağız.</p></div>
 </section>
 </main>
@@ -31,53 +31,152 @@ main{max-width:1440px;margin:auto;padding:0 clamp(16px,5vw,72px)}.intro{padding:
 <div class="player" id="player" aria-label="ZEVORA video oynatıcı">
 <video id="video" controls playsinline preload="metadata"></video>
 <div class="playerbar"><select id="quality" aria-label="Görüntü kalitesi" hidden></select><button id="full" aria-label="Tam ekran">⛶ Tam ekran</button><button id="close" aria-label="Oynatıcıyı kapat">✕</button></div>
-<div class="playererror" id="playererror">Bu yapım için şu anda oynatılabilir bir video dosyası bulunamadı.</div>
+<div class="playererror" id="playererror"></div>
 </div>
 <script>
 /* Kayıtlar lisans ve doğrudan medya kaynağı kontrol edilerek eklenir. */
-const catalog = [{
- id:"paywall-2018",kind:"documentary",title:"Paywall: The Business of Scholarship",
- year:2018,runtime:"64 dk 48 sn",language:"İngilizce",genres:["Belgesel","Bilim","Teknoloji"],
- synopsis:"Bilimsel yayıncılık endüstrisini, akademik bilgiye erişimi ve açık erişim hareketini inceler.",
- poster:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Paywall_documentary_poster.jpg",
- sources:[{label:"Orijinal dosya · OGG",url:"https://commons.wikimedia.org/wiki/Special:Redirect/file/2018_documentary_%27Paywall_%E2%80%93_The_Business_of_Scholarship%27.ogg",type:"video/ogg"}],
- license:"Creative Commons Attribution 4.0 (CC BY 4.0)",
- credit:"Jason Schmitt / Paywall film ekibi",
- rightsUrl:"https://commons.wikimedia.org/wiki/File:2018_documentary_%27Paywall_%E2%80%93_The_Business_of_Scholarship%27.ogg",
- licenseUrl:"https://creativecommons.org/licenses/by/4.0/"
-}];
+const catalog = [
+ {
+  id:"paywall-2018",kind:"documentary",title:"Paywall: The Business of Scholarship",
+  year:2018,runtime:"64 dk 48 sn",runtimeMinutes:64.8,language:"İngilizce",
+  dub:"Türkçe dublaj yok; özgün dil İngilizce.",subtitles:"Türkçe altyazı doğrulanmadı.",
+  genres:["Belgesel","Bilim","Teknoloji","Araştırma"],
+  synopsis:"Akademik yayıncılık endüstrisinin ekonomik modelini, bilimsel bilgiye erişimi ve açık erişim hareketinin mücadelesini inceler.",
+  poster:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Paywall_documentary_poster.jpg",
+  posterSource:"https://commons.wikimedia.org/wiki/File:Paywall_documentary_poster.jpg",
+  posterLicense:"CC BY-SA 4.0",
+  sources:[{label:"OGG/Theora · Wikimedia Commons",url:"https://upload.wikimedia.org/wikipedia/commons/b/bb/2018_documentary_%27Paywall_%E2%80%93_The_Business_of_Scholarship%27.ogg",type:"video/ogg"}],
+  playbackSource:"https://upload.wikimedia.org/wikipedia/commons/b/bb/2018_documentary_%27Paywall_%E2%80%93_The_Business_of_Scholarship%27.ogg",
+  playbackStatus:"Doğrudan OGG video dosyası ve lisans kaydı bulundu. ZEVORA R2/Stream aktarımı ve gerçek cihaz oynatma testi henüz yapılmadı.",
+  playbackVerified:false,rightsVerified:true,countsTowardTarget:true,
+  license:"Creative Commons Attribution 4.0 (CC BY 4.0)",
+  licenseEvidence:"Wikimedia Commons dosya sayfası filmi CC BY 4.0 olarak tanımlıyor; açıklamada filmin özel ve kamusal kullanım için ücretsiz izlenip indirilebildiği belirtiliyor.",
+  rightsHolder:"Jason Schmitt / Paywall film ekibi",credit:"Jason Schmitt / Paywall film ekibi",
+  sourceUrl:"https://paywallthemovie.com/",
+  rightsUrl:"https://commons.wikimedia.org/wiki/File:2018_documentary_%27Paywall_%E2%80%93_The_Business_of_Scholarship%27.ogg",
+  licenseUrl:"https://creativecommons.org/licenses/by/4.0/"
+ },
+ {
+  id:"dominion-2018",kind:"documentary",title:"Dominion",
+  year:2018,runtime:"120 dk",runtimeMinutes:120,language:"İngilizce",
+  dub:"Türkçe dublaj yok; özgün dil İngilizce.",subtitles:"Türkçe SRT altyazısı resmî sitede mevcut.",
+  genres:["Belgesel","Doğa","Hayvan Hakları","Araştırma"],
+  synopsis:"Hayvan tarımı endüstrisini; gıda, giyim, eğlence ve araştırma alanlarında hayvanlara yönelik uygulamaları araştırmacı görüntülerle inceler. Yoğun ve rahatsız edici görüntüler içerir; resmî Avustralya sınıflandırması MA15+.",
+  poster:"https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Dominion_%282018%29_%E2%80%93_full_documentary.webm/1280px--Dominion_%282018%29_%E2%80%93_full_documentary.webm.jpg",
+  posterSource:"https://commons.wikimedia.org/wiki/File:Dominion_(2018)_%E2%80%93_full_documentary.webm",
+  posterLicense:"CC BY 4.0 · film karesi",
+  sources:[
+   {label:"MP4 · Internet Archive (1080p)",url:"https://archive.org/download/dominion-2018_202203/Dominion_2018_1080p.mp4",type:"video/mp4"},
+   {label:"WebM/AV1 · Wikimedia Commons",url:"https://upload.wikimedia.org/wikipedia/commons/0/0b/Dominion_%282018%29_%E2%80%93_full_documentary.webm",type:"video/webm"}
+  ],
+  playbackSource:"https://archive.org/download/dominion-2018_202203/Dominion_2018_1080p.mp4",
+  playbackStatus:"Hak sahibi CC BY 4.0 ve ücretsiz yeniden yükleme iznini doğruluyor. Dosya dış arşivde; ZEVORA R2/Stream aktarımı ve gerçek cihaz oynatma testi bekliyor.",
+  playbackVerified:false,rightsVerified:true,countsTowardTarget:true,
+  license:"Creative Commons Attribution 4.0 (CC BY 4.0)",
+  licenseEvidence:"Dominion resmî SSS sayfası CC BY 4.0 lisansını açıkça belirtiyor; resmî indirme sayfası ücretsiz indirme, paylaşma, değiştirme ve yeniden yükleme iznini açıklıyor. Wikimedia Commons dosyası 10 Ocak 2026 tarihinde lisans incelemesinden geçmiş.",
+  rightsHolder:"Farm Transparency Project (FTP)",credit:"Farm Transparency Project (FTP)",
+  sourceUrl:"https://dominionmovement.com/download",
+  rightsUrl:"https://commons.wikimedia.org/wiki/File:Dominion_(2018)_%E2%80%93_full_documentary.webm",
+  licenseUrl:"https://creativecommons.org/licenses/by/4.0/",
+  tracks:[{label:"Türkçe altyazı",lang:"tr",url:"https://dominionmovement.com/downloads/subtitles/Dominion.Turkish.srt"}]
+ },
+ {
+  id:"mage-porob-2019",kind:"documentary",title:"Mage Porob",
+  year:2019,runtime:"40 dk 50 sn",runtimeMinutes:40.83,language:"Ho",
+  dub:"Türkçe dublaj yok; özgün dil Ho.",subtitles:"İngilizce açık altyazılı MP4 mevcut; Türkçe altyazı doğrulanmadı.",
+  genres:["Belgesel","Kültür","Gelenek","Toplum"],
+  synopsis:"Hindistan'ın Odisha bölgesindeki Keshpada Ho topluluğunun Mage Porob hasat festivalini, şarkılarını, danslarını, atalarını ve değişen yaşam biçimlerini anlatır.",
+  poster:"https://theofdn.org/assets/images/mage-porob-poster.webp",
+  posterSource:"https://theofdn.org/film/mage-porob/",
+  posterLicense:"CC BY-SA 4.0 · O Foundation",
+  sources:[{label:"MP4 · Internet Archive (açık altyazılı)",url:"https://archive.org/download/mage-porob/1-Mage-Porob-open-captioning.mp4",type:"video/mp4"}],
+  playbackSource:"https://archive.org/download/mage-porob/1-Mage-Porob-open-captioning.mp4",
+  playbackStatus:"Hak sahibi ve CC BY-SA 4.0 lisansı resmî O Foundation sayfası ile Internet Archive kaydında doğrulandı. Dosya dış arşivde; ZEVORA R2/Stream aktarımı ve gerçek cihaz oynatma testi bekliyor.",
+  playbackVerified:false,rightsVerified:true,countsTowardTarget:true,
+  license:"Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0)",
+  licenseEvidence:"Internet Archive kaydı Subhashish Panigrahi'yi telif sahibi ve CC BY-SA 4.0 lisansını gösteriyor. O Foundation'ın resmî film sayfası da aynı lisansı doğruluyor.",
+  rightsHolder:"Subhashish Panigrahi / O Foundation",credit:"Subhashish Panigrahi / O Foundation",
+  sourceUrl:"https://theofdn.org/film/mage-porob/",
+  rightsUrl:"https://archive.org/details/mage-porob",
+  licenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/"
+ },
+ {
+  id:"panopticon-2012",kind:"documentary",title:"Panopticon",
+  year:2012,runtime:"57 dk 15 sn",runtimeMinutes:57.25,language:"Hollandaca",
+  dub:"Türkçe dublaj yok; özgün dil Hollandaca.",subtitles:"İngilizce altyazı mevcut; Türkçe altyazı doğrulanmadı.",
+  genres:["Belgesel","Teknoloji","Toplum","Araştırma"],
+  synopsis:"Peter Vlemmix, Hollanda'da kameralar, ulaşım kartları ve kurumların veri tabanları üzerinden büyüyen gözetimi araştırıyor; mahremiyetin günlük hayatta nasıl aşındığını sorguluyor.",
+  poster:"https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/FULL_DOCUMENTARY_-_Panopticon_privacy_-_Peter_Vlemmix.webm/1280px--FULL_DOCUMENTARY_-_Panopticon_privacy_-_Peter_Vlemmix.webm.jpg",
+  posterSource:"https://commons.wikimedia.org/wiki/File:FULL_DOCUMENTARY_-_Panopticon_privacy_-_Peter_Vlemmix.webm",
+  posterLicense:"CC BY 3.0 · film karesi",
+  sources:[{label:"WebM/VP8 · Wikimedia Commons",url:"https://upload.wikimedia.org/wikipedia/commons/0/0e/FULL_DOCUMENTARY_-_Panopticon_privacy_-_Peter_Vlemmix.webm",type:"video/webm"}],
+  playbackSource:"https://upload.wikimedia.org/wikipedia/commons/0/0e/FULL_DOCUMENTARY_-_Panopticon_privacy_-_Peter_Vlemmix.webm",
+  playbackStatus:"Wikimedia Commons dosyası CC BY 3.0 lisansıyla insan lisans incelemesinden geçmiş. Doğrudan WebM dosyası mevcut; ZEVORA R2/Stream aktarımı ve gerçek cihaz oynatma testi bekliyor.",
+  playbackVerified:false,rightsVerified:true,countsTowardTarget:true,
+  license:"Creative Commons Attribution 3.0 (CC BY 3.0)",
+  licenseEvidence:"Wikimedia Commons dosya kaydı CC BY 3.0 lisansını ve 21 Aralık 2016 tarihli insan lisans incelemesini gösteriyor. IFN film kaydı da yönetmen, süre, dil ve CC BY 3.0 koşulunu doğruluyor.",
+  rightsHolder:"Peter Vlemmix",credit:"Peter Vlemmix",
+  sourceUrl:"https://www.theindiefilmnetwork.com/movies/panopticon",
+  rightsUrl:"https://commons.wikimedia.org/wiki/File:FULL_DOCUMENTARY_-_Panopticon_privacy_-_Peter_Vlemmix.webm",
+  licenseUrl:"https://creativecommons.org/licenses/by/3.0/"
+ }
+];
 const search=document.getElementById('search'),empty=document.getElementById('empty'),count=document.getElementById('count');
 let activeKind='all';
 const grid=document.getElementById('catalogGrid');
 function render(){
  const term=search.value.trim().toLocaleLowerCase('tr');
- const rows=catalog.filter(x=>(activeKind==='all'||x.kind===activeKind)&&(!term||(x.title+' '+(x.year||'')+' '+(x.genres||[]).join(' ')).toLocaleLowerCase('tr').includes(term)));
- count.textContent=rows.length+' doğrulanmış yapım';
+ const rows=catalog.filter(x=>(activeKind==='all'||x.kind===activeKind)&&(!term||(x.title+' '+(x.year||'')+' '+(x.genres||[]).join(' ')+' '+(x.synopsis||'')+' '+(x.language||'')+' '+(x.subtitles||'')).toLocaleLowerCase('tr').includes(term)));
+ const rightsCount=catalog.filter(x=>x.countsTowardTarget&&x.rightsVerified&&x.runtimeMinutes>=40).length;
+ const playbackCount=catalog.filter(x=>x.countsTowardTarget&&x.playbackVerified&&x.runtimeMinutes>=40).length;
+ count.textContent=rightsCount+'/200 lisansı doğrulanmış uzun yapım · '+playbackCount+' oynatma testi tamam';
  grid.innerHTML='';
  rows.forEach(item=>{
-  const card=document.createElement('article');card.className='film-card';card.tabIndex=0;card.setAttribute('role','button');card.setAttribute('aria-label',item.title+' filmini oynat');
+  const card=document.createElement('article');card.className='film-card';card.tabIndex=0;card.setAttribute('role','button');card.setAttribute('aria-label',item.title+' ayrıntılarını aç');
   const img=document.createElement('img');img.src=item.poster;img.alt=item.title+' afişi';img.loading='lazy';img.onerror=()=>{img.style.display='none'};
   const info=document.createElement('div');info.className='film-info';
   const title=document.createElement('strong');title.textContent=item.title;
   const meta=document.createElement('small');meta.textContent=item.year+' · '+item.runtime+' · '+item.language;
   const lic=document.createElement('small');lic.className='license';lic.textContent=item.license;
-  info.append(title,meta,lic);card.append(img,info);
+  const status=document.createElement('small');status.className='card-status';status.textContent=item.playbackVerified?'Oynatma testi tamamlandı':'Lisans doğrulandı · Oynatma testi bekliyor';
+  info.append(title,meta,lic,status);card.append(img,info);
   card.addEventListener('click',()=>playTitle(item));card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();playTitle(item)}});
   grid.append(card);
  });
  empty.style.display=rows.length?'none':'block';
 }
 const player=document.getElementById('player'),video=document.getElementById('video'),quality=document.getElementById('quality'),playererror=document.getElementById('playererror');
+function addPendingLink(container,label,url){
+ if(!url)return;
+ const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=label;container.appendChild(a);
+}
 function playTitle(item){
+ player.classList.add('open');playererror.classList.remove('show');video.pause();video.removeAttribute('src');video.innerHTML='';quality.innerHTML='';quality.hidden=true;
+ if(!item.playbackVerified){
+  video.style.display='none';playererror.innerHTML='';
+  const h=document.createElement('h3');h.textContent=item.title;
+  const p=document.createElement('p');p.textContent=item.playbackStatus||'Oynatma testi henüz tamamlanmadı.';
+  const meta=document.createElement('div');meta.className='pending-meta';meta.textContent=item.year+' · '+item.runtime+' · '+item.language+' · '+item.license+' · Hak sahibi: '+item.rightsHolder;
+  const sub=document.createElement('p');sub.textContent=(item.dub||'')+' '+(item.subtitles||'');
+  const links=document.createElement('div');links.className='pending-links';
+  addPendingLink(links,'Doğrudan video dosyası',item.playbackSource);
+  addPendingLink(links,'Lisans kanıtı',item.rightsUrl);
+  addPendingLink(links,'Hak sahibinin kaynağı',item.sourceUrl);
+  addPendingLink(links,'Afiş kaynağı',item.posterSource);
+  addPendingLink(links,'Lisans metni',item.licenseUrl);
+  if(item.tracks&&item.tracks.length)addPendingLink(links,'Türkçe altyazı dosyası',item.tracks[0].url);
+  playererror.append(h,p,meta,sub,links);playererror.classList.add('show');return;
+ }
  const sources=(item.sources||[]).filter(s=>s.url);
- if(!sources.length){return}
- player.classList.add('open');playererror.classList.remove('show');video.pause();video.removeAttribute('src');video.innerHTML='';
+ if(!sources.length){video.style.display='none';playererror.textContent='Oynatılabilir kaynak bulunamadı.';playererror.classList.add('show');return;}
+ video.style.display='block';
  sources.forEach((s,i)=>{const el=document.createElement('source');el.src=s.url;if(s.type)el.type=s.type;el.dataset.label=s.label||('Kaynak '+(i+1));video.appendChild(el)});
+ (item.tracks||[]).forEach(t=>{const track=document.createElement('track');track.kind='subtitles';track.src=t.url;track.srclang=t.lang||'tr';track.label=t.label||'Türkçe';if(t.lang==='tr')track.default=true;video.appendChild(track)});
  quality.innerHTML='';sources.forEach((s,i)=>{const opt=document.createElement('option');opt.value=String(i);opt.textContent=s.label||('Kaynak '+(i+1));quality.appendChild(opt)});
  quality.hidden=sources.length<2;video.load();video.play().catch(()=>{playererror.textContent='Video başlatılamadı. Dosya biçimi veya kaynak erişimi bu tarayıcıda desteklenmiyor olabilir.';playererror.classList.add('show')});
 }
-video.addEventListener('error',()=>{if(player.classList.contains('open'))playererror.classList.add('show')});
-function closePlayer(){video.pause();video.removeAttribute('src');video.innerHTML='';video.load();player.classList.remove('open')}
+video.addEventListener('error',()=>{if(player.classList.contains('open')&&video.style.display!=='none'){playererror.textContent='Video dosyası bu tarayıcıda açılamadı. ZEVORA oynatma testi tamamlanmış olarak işaretlenmedi.';playererror.classList.add('show')}});
+function closePlayer(){video.pause();video.removeAttribute('src');video.innerHTML='';video.style.display='';video.load();playererror.innerHTML='';playererror.classList.remove('show');player.classList.remove('open')}
 quality.addEventListener('change',()=>{const t=video.currentTime,wasPlaying=!video.paused;const source=video.querySelectorAll('source')[Number(quality.value)];if(!source)return;video.src=source.src;video.load();video.currentTime=t;if(wasPlaying)video.play().catch(()=>{})});
 document.getElementById('close').addEventListener('click',closePlayer);
 document.getElementById('full').addEventListener('click',()=>{if(!document.fullscreenElement){(player.requestFullscreen||player.webkitRequestFullscreen).call(player)}else{(document.exitFullscreen||document.webkitExitFullscreen).call(document)}});
