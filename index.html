@@ -151,32 +151,32 @@ function addPendingLink(container,label,url){
  const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=label;container.appendChild(a);
 }
 function playTitle(item){
- player.classList.add('open');playererror.classList.remove('show');video.pause();video.removeAttribute('src');video.innerHTML='';quality.innerHTML='';quality.hidden=true;
- if(!item.playbackVerified){
-  video.style.display='none';playererror.innerHTML='';
-  const h=document.createElement('h3');h.textContent=item.title;
-  const p=document.createElement('p');p.textContent=item.playbackStatus||'Oynatma testi henüz tamamlanmadı.';
-  const meta=document.createElement('div');meta.className='pending-meta';meta.textContent=item.year+' · '+item.runtime+' · '+item.language+' · '+item.license+' · Hak sahibi: '+item.rightsHolder;
-  const sub=document.createElement('p');sub.textContent=(item.dub||'')+' '+(item.subtitles||'');
-  const links=document.createElement('div');links.className='pending-links';
-  addPendingLink(links,'Doğrudan video dosyası',item.playbackSource);
-  addPendingLink(links,'Lisans kanıtı',item.rightsUrl);
-  addPendingLink(links,'Hak sahibinin kaynağı',item.sourceUrl);
-  addPendingLink(links,'Afiş kaynağı',item.posterSource);
-  addPendingLink(links,'Lisans metni',item.licenseUrl);
-  if(item.tracks&&item.tracks.length)addPendingLink(links,'Türkçe altyazı dosyası',item.tracks[0].url);
-  playererror.append(h,p,meta,sub,links);playererror.classList.add('show');return;
- }
+ player.classList.add('open');playererror.classList.remove('show');video.pause();video.removeAttribute('src');video.innerHTML='';quality.innerHTML='';quality.hidden=true;video.style.display='block';
  const sources=(item.sources||[]).filter(s=>s.url);
- if(!sources.length){video.style.display='none';playererror.textContent='Oynatılabilir kaynak bulunamadı.';playererror.classList.add('show');return;}
- video.style.display='block';
- sources.forEach((s,i)=>{const el=document.createElement('source');el.src=s.url;if(s.type)el.type=s.type;el.dataset.label=s.label||('Kaynak '+(i+1));video.appendChild(el)});
- (item.tracks||[]).forEach(t=>{const track=document.createElement('track');track.kind='subtitles';track.src=t.url;track.srclang=t.lang||'tr';track.label=t.label||'Türkçe';if(t.lang==='tr')track.default=true;video.appendChild(track)});
- quality.innerHTML='';sources.forEach((s,i)=>{const opt=document.createElement('option');opt.value=String(i);opt.textContent=s.label||('Kaynak '+(i+1));quality.appendChild(opt)});
- quality.hidden=sources.length<2;video.load();video.play().catch(()=>{playererror.textContent='Video başlatılamadı. Dosya biçimi veya kaynak erişimi bu tarayıcıda desteklenmiyor olabilir.';playererror.classList.add('show')});
+ if(!sources.length){video.style.display='none';playererror.textContent='Bu yapım için henüz doğrulanmış yayın kaynağı eklenmedi.';playererror.classList.add('show');return;}
+ let activeSource=0, hls=null, frame=null;
+ const clearMedia=()=>{if(hls){hls.destroy();hls=null;}if(frame){frame.remove();frame=null;}video.pause();video.removeAttribute('src');video.innerHTML='';};
+ const showFailure=message=>{playererror.textContent=message;playererror.classList.add('show');};
+ const startSource=(index)=>{
+  activeSource=index;clearMedia();playererror.classList.remove('show');
+  const s=sources[index];const type=(s.type||'').toLowerCase();const url=s.url;
+  if(s.kind==='embed'||type==='embed'||type==='iframe'){
+   video.style.display='none';frame=document.createElement('iframe');frame.src=url;frame.allow='autoplay; fullscreen; picture-in-picture; encrypted-media';frame.allowFullscreen=true;frame.referrerPolicy='strict-origin-when-cross-origin';frame.title=item.title+' video oynatıcı';frame.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:0;background:#000';player.insertBefore(frame,playerbar);return;
+  }
+  video.style.display='block';
+  (item.tracks||[]).forEach(t=>{const track=document.createElement('track');track.kind='subtitles';track.src=t.url;track.srclang=t.lang||'tr';track.label=t.label||'Türkçe';if(t.lang==='tr')track.default=true;video.appendChild(track)});
+  if(type.includes('mpegurl')||/\.m3u8(?:$|\?)/i.test(url)){
+   if(video.canPlayType('application/vnd.apple.mpegurl')){video.src=url;video.play().catch(()=>showFailure('HLS akışı otomatik başlamadı. Oynat düğmesine bas.'));}
+   else if(window.Hls&&Hls.isSupported()){hls=new Hls({enableWorker:true,lowLatencyMode:false});hls.loadSource(url);hls.attachMedia(video);hls.on(Hls.Events.MANIFEST_PARSED,()=>video.play().catch(()=>{}));hls.on(Hls.Events.ERROR,(_,data)=>{if(data.fatal)showFailure('HLS akışı açılamadı. Kaynak adresini, CORS ve yayın iznini kontrol etmek gerekiyor.');});}
+   else showFailure('Bu tarayıcı HLS akışını desteklemiyor.');
+  }else{const src=document.createElement('source');src.src=url;if(s.type&&s.type!=='video')src.type=s.type;video.appendChild(src);video.load();video.play().catch(()=>{});}
+ };
+ if(sources.length>1){sources.forEach((s,i)=>{const opt=document.createElement('option');opt.value=String(i);opt.textContent=s.label||('Kaynak '+(i+1));quality.appendChild(opt)});quality.hidden=false;quality.onchange=()=>startSource(Number(quality.value));}
+ else quality.hidden=true;
+ startSource(0);
 }
 video.addEventListener('error',()=>{if(player.classList.contains('open')&&video.style.display!=='none'){playererror.textContent='Video dosyası bu tarayıcıda açılamadı. ZEVORA oynatma testi tamamlanmış olarak işaretlenmedi.';playererror.classList.add('show')}});
-function closePlayer(){video.pause();video.removeAttribute('src');video.innerHTML='';video.style.display='';video.load();playererror.innerHTML='';playererror.classList.remove('show');player.classList.remove('open')}
+function closePlayer(){video.pause();const frame=player.querySelector('iframe');if(frame)frame.remove();video.removeAttribute('src');video.innerHTML='';video.style.display='';video.load();playererror.innerHTML='';playererror.classList.remove('show');player.classList.remove('open')}
 quality.addEventListener('change',()=>{const t=video.currentTime,wasPlaying=!video.paused;const source=video.querySelectorAll('source')[Number(quality.value)];if(!source)return;video.src=source.src;video.load();video.currentTime=t;if(wasPlaying)video.play().catch(()=>{})});
 document.getElementById('close').addEventListener('click',closePlayer);
 document.getElementById('full').addEventListener('click',()=>{if(!document.fullscreenElement){(player.requestFullscreen||player.webkitRequestFullscreen).call(player)}else{(document.exitFullscreen||document.webkitExitFullscreen).call(document)}});
