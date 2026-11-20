@@ -1,10 +1,10 @@
 # ZEVORA — Lisans, hak sahibi ve yayın kaydı
 
-Son katalog kontrolü: 17 Kasım 2026.
+Son katalog kontrolü: 20 Kasım 2026.
 
 ## Gerçek ilerleme
 
-- **Lisansı ve yeniden dağıtım hakkı doğrulanmış uzun metraj/belgesel:** 4 / 200
+- **Lisansı ve yeniden dağıtım hakkı doğrulanmış uzun metraj/belgesel:** 5 / 200
 - **ZEVORA üzerinde uçtan uca oynatma testi tamamlanan:** 0 / 4
 - Kayıtlar 40 dakika ve üzerindeki uzun yapımlardan oluşur. Fragman, kısa film, bölüm ve aynı eserin farklı çözünürlükleri hedef sayısına eklenmez.
 - Bu dört kayıt katalogda yer alır; ancak hiçbirisi henüz **izlenebilir** olarak işaretlenmemiştir. Harici dosya adresi bulunması, ZEVORA oynatmasının test edildiği anlamına gelmez.
