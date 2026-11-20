@@ -5,9 +5,9 @@ Son katalog kontrolü: 20 Kasım 2026.
 ## Gerçek ilerleme
 
 - **Lisansı ve yeniden dağıtım hakkı doğrulanmış uzun metraj/belgesel:** 5 / 200
-- **ZEVORA üzerinde uçtan uca oynatma testi tamamlanan:** 0 / 4
+- **ZEVORA üzerinde uçtan uca oynatma testi tamamlanan:** 0 / 5
 - Kayıtlar 40 dakika ve üzerindeki uzun yapımlardan oluşur. Fragman, kısa film, bölüm ve aynı eserin farklı çözünürlükleri hedef sayısına eklenmez.
-- Bu dört kayıt katalogda yer alır; ancak hiçbirisi henüz **izlenebilir** olarak işaretlenmemiştir. Harici dosya adresi bulunması, ZEVORA oynatmasının test edildiği anlamına gelmez.
+- Bu beş kayıt katalogda yer alır; ancak hiçbirisi henüz **izlenebilir** olarak işaretlenmemiştir. Harici dosya adresi bulunması, ZEVORA oynatmasının test edildiği anlamına gelmez.
 
 ---
 
@@ -85,6 +85,27 @@ Son katalog kontrolü: 20 Kasım 2026.
 - **Doğrudan WebM dosyası:** https://upload.wikimedia.org/wikipedia/commons/0/0e/FULL_DOCUMENTARY_-_Panopticon_privacy_-_Peter_Vlemmix.webm
 - **Dosya biçimi:** WebM/VP8-Opus; yaklaşık 632 MB.
 - **ZEVORA oynatma durumu:** İnsan lisans incelemesi ve doğrudan dosya kaynağı doğrulandı; R2/Stream'e aktarılmadı, gerçek cihaz testi yapılmadı. İzlenebilir sayılmıyor.
+
+## 5. Valkaama
+
+- **Yıl / süre:** 2010 · 93 dakika
+- **Tür:** Uzun metraj kurmaca film · dram · macera · romantik · yol filmi
+- **Türkçe açıklama:** İsveçli şair Lasse, engelli arkadaşı Ari ile kuzey Finlandiya'daki Valkaama'ya doğru son bir yolculuğa çıkar. Lasse'in geçmişi, Ari'nin sakladığı gerçekler ve Runa'nın arayışı, yolculuğu kader, dostluk ve aidiyet üzerine dramatik bir hesaplaşmaya dönüştürür.
+- **Özgün dil / dublaj:** İngilizce; Türkçe dublaj yok.
+- **Altyazı:** İngilizce, Almanca, Fransızca, İtalyanca, Korece, Lehçe ve İspanyolca altyazılar resmî sitede listeleniyor; Türkçe altyazı yok.
+- **Yönetmen / yapımcı / film hak sahibi:** Tim Baumann / Valkaama projesi. Öykü: Hendrik Behnisch.
+- **Film lisansı:** Creative Commons Attribution-ShareAlike 3.0 (CC BY-SA 3.0). Resmî film sayfası lisansı açıkça bildiriyor. Resmî kaynak sayfası film kaynaklarını ve senaryoyu aynı lisansla sunuyor. Resmî müzik sayfası üç ayrı film müziği skorunu da CC BY-SA 3.0 olarak tanımlıyor.
+- **Lisans metni:** https://creativecommons.org/licenses/by-sa/3.0/
+- **Resmî film / lisans kanıtı:** https://www.valkaama.com/index.php?page=movie&l=en
+- **Ek kaynak ve müzik lisansı kanıtı:** https://www.valkaama.com/index.php?page=sources&l=en · https://www.valkaama.com/index.php?page=music&l=en
+- **Süre kanıtı:** https://screenrant.com/db/movie/valkaama/ (93 dakika)
+- **Afiş/film karesi kaynağı:** https://www.valkaama.com/media/stills/valkaama_00a.jpg
+- **Görsel lisansı:** CC BY-SA 3.0 · resmî film sayfasında yer alan film karesi.
+- **Doğrudan video dosyası:** https://www.valkaama.com/download.php?target=media/movie/Valkaama_1080_p.mkv
+- **Alternatif doğrudan video dosyası:** https://www.valkaama.com/download.php?target=media/movie/Valkaama_720p.mkv
+- **Dosya biçimi:** MKV / H.264 video; resmî sitede 1080p ve 720p indirme seçenekleri.
+- **ZEVORA oynatma durumu:** Resmî indirme dosyaları kayıtlıdır; ZEVORA R2/Stream'e aktarılmadı ve gerçek cihaz oynatma testi yapılmadı. İzlenebilir sayılmıyor.
+
 
 ---
 
