@@ -18,7 +18,7 @@ main{max-width:1440px;margin:auto;padding:0 clamp(16px,5vw,72px)}.intro{padding:
 <section class="intro">
 <div class="eyebrow">FİLM · DİZİ · BELGESEL</div>
 <h1>Hikâyeler burada<br>hayat bulur.</h1>
-<p>ZEVORA'nın film ve dizi arşivi hazırlanıyor. Kataloğa yalnızca yayınlama ve yeniden dağıtım izni doğrulanmış yapımlar eklenecek.</p>
+<p>ZEVORA'nın film ve dizi arşivi hazırlanıyor. Kataloğa yalnızca yayınlama ve yeniden dağıtım izni doğrulanmış yapımlar eklenir. İçerik, ZEVORA depolamasına aktarılıp kendi oynatıcısında test edilmeden izlenebilir sayılmaz.</p>
 <div class="searchbar"><input id="search" type="search" placeholder="Film, dizi veya belgesel ara..." aria-label="Katalogda ara"></div>
 <div class="filters" id="filters"><button class="active" data-kind="all">Tümü</button><button data-kind="film">Filmler</button><button data-kind="series">Diziler</button><button data-kind="documentary">Belgeseller</button></div>
 </section>
@@ -35,7 +35,7 @@ main{max-width:1440px;margin:auto;padding:0 clamp(16px,5vw,72px)}.intro{padding:
 </div>
 <script src="https://cdn.jsdelivr.net/npm/hls.js@1.6.13/dist/hls.min.js" crossorigin="anonymous"></script>
 <script>
-/* Kayıtlar lisans ve doğrudan medya kaynağı kontrol edilerek eklenir. */
+/* playbackVerified ve hostedByZevora yalnızca ZEVORA depolamasına aktarım ve gerçek oynatma testi tamamlandığında true yapılır. */
 const catalog = [
  {
   id:"paywall-2018",kind:"documentary",title:"Paywall: The Business of Scholarship",
@@ -49,7 +49,7 @@ const catalog = [
   sources:[{label:"OGG/Theora · Wikimedia Commons",url:"https://upload.wikimedia.org/wikipedia/commons/b/bb/2018_documentary_%27Paywall_%E2%80%93_The_Business_of_Scholarship%27.ogg",type:"video/ogg"}],
   playbackSource:"https://upload.wikimedia.org/wikipedia/commons/b/bb/2018_documentary_%27Paywall_%E2%80%93_The_Business_of_Scholarship%27.ogg",
   playbackStatus:"Doğrudan OGG video dosyası ve lisans kaydı bulundu. ZEVORA R2/Stream aktarımı ve gerçek cihaz oynatma testi henüz yapılmadı.",
-  playbackVerified:false,rightsVerified:true,countsTowardTarget:true,
+  playbackVerified:false,hostedByZevora:false,rightsVerified:true,countsTowardTarget:true,
   license:"Creative Commons Attribution 4.0 (CC BY 4.0)",
   licenseEvidence:"Wikimedia Commons dosya sayfası filmi CC BY 4.0 olarak tanımlıyor; açıklamada filmin özel ve kamusal kullanım için ücretsiz izlenip indirilebildiği belirtiliyor.",
   rightsHolder:"Jason Schmitt / Paywall film ekibi",credit:"Jason Schmitt / Paywall film ekibi",
@@ -72,7 +72,7 @@ const catalog = [
   ],
   playbackSource:"https://archive.org/download/dominion-2018_202203/Dominion_2018_1080p.mp4",
   playbackStatus:"Hak sahibi CC BY 4.0 ve ücretsiz yeniden yükleme iznini doğruluyor. Dosya dış arşivde; ZEVORA R2/Stream aktarımı ve gerçek cihaz oynatma testi bekliyor.",
-  playbackVerified:false,rightsVerified:true,countsTowardTarget:true,
+  playbackVerified:false,hostedByZevora:false,rightsVerified:true,countsTowardTarget:true,
   license:"Creative Commons Attribution 4.0 (CC BY 4.0)",
   licenseEvidence:"Dominion resmî SSS sayfası CC BY 4.0 lisansını açıkça belirtiyor; resmî indirme sayfası ücretsiz indirme, paylaşma, değiştirme ve yeniden yükleme iznini açıklıyor. Wikimedia Commons dosyası 10 Ocak 2026 tarihinde lisans incelemesinden geçmiş.",
   rightsHolder:"Farm Transparency Project (FTP)",credit:"Farm Transparency Project (FTP)",
@@ -93,7 +93,7 @@ const catalog = [
   sources:[{label:"MP4 · Internet Archive (açık altyazılı)",url:"https://archive.org/download/mage-porob/1-Mage-Porob-open-captioning.mp4",type:"video/mp4"}],
   playbackSource:"https://archive.org/download/mage-porob/1-Mage-Porob-open-captioning.mp4",
   playbackStatus:"Hak sahibi ve CC BY-SA 4.0 lisansı resmî O Foundation sayfası ile Internet Archive kaydında doğrulandı. Dosya dış arşivde; ZEVORA R2/Stream aktarımı ve gerçek cihaz oynatma testi bekliyor.",
-  playbackVerified:false,rightsVerified:true,countsTowardTarget:true,
+  playbackVerified:false,hostedByZevora:false,rightsVerified:true,countsTowardTarget:true,
   license:"Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0)",
   licenseEvidence:"Internet Archive kaydı Subhashish Panigrahi'yi telif sahibi ve CC BY-SA 4.0 lisansını gösteriyor. O Foundation'ın resmî film sayfası da aynı lisansı doğruluyor.",
   rightsHolder:"Subhashish Panigrahi / O Foundation",credit:"Subhashish Panigrahi / O Foundation",
@@ -113,7 +113,7 @@ const catalog = [
   sources:[{label:"WebM/VP8 · Wikimedia Commons",url:"https://upload.wikimedia.org/wikipedia/commons/0/0e/FULL_DOCUMENTARY_-_Panopticon_privacy_-_Peter_Vlemmix.webm",type:"video/webm"}],
   playbackSource:"https://upload.wikimedia.org/wikipedia/commons/0/0e/FULL_DOCUMENTARY_-_Panopticon_privacy_-_Peter_Vlemmix.webm",
   playbackStatus:"Wikimedia Commons dosyası CC BY 3.0 lisansıyla insan lisans incelemesinden geçmiş. Doğrudan WebM dosyası mevcut; ZEVORA R2/Stream aktarımı ve gerçek cihaz oynatma testi bekliyor.",
-  playbackVerified:false,rightsVerified:true,countsTowardTarget:true,
+  playbackVerified:false,hostedByZevora:false,rightsVerified:true,countsTowardTarget:true,
   license:"Creative Commons Attribution 3.0 (CC BY 3.0)",
   licenseEvidence:"Wikimedia Commons dosya kaydı CC BY 3.0 lisansını ve 21 Aralık 2016 tarihli insan lisans incelemesini gösteriyor. IFN film kaydı da yönetmen, süre, dil ve CC BY 3.0 koşulunu doğruluyor.",
   rightsHolder:"Peter Vlemmix",credit:"Peter Vlemmix",
@@ -136,7 +136,7 @@ const catalog = [
   ],
   playbackSource:"https://www.valkaama.com/download.php?target=media/movie/Valkaama_1080_p.mkv",
   playbackStatus:"Hak sahibi resmî sitesinde tam filmin 1080p ve 720p MKV indirmelerini sunuyor. Dosya ZEVORA R2/Stream'e aktarılmadı; gerçek cihaz oynatma testi yapılmadı. İzlenebilir değil.",
-  playbackVerified:false,rightsVerified:true,countsTowardTarget:true,
+  playbackVerified:false,hostedByZevora:false,rightsVerified:true,countsTowardTarget:true,
   license:"Creative Commons Attribution-ShareAlike 3.0 (CC BY-SA 3.0)",
   licenseEvidence:"Valkaama'nın resmî film sayfası filmi açıkça CC BY-SA 3.0 lisanslıyor. Resmî kaynak sayfası film kaynaklarını ve senaryoyu aynı lisansla sunuyor; resmî müzik sayfası filmde kullanılan üç ayrı müzik skorunun da CC BY-SA 3.0 olduğunu belirtiyor. Lisans ticari paylaşım ve uyarlamaya izin verir; atıf ve ShareAlike koşulları uygulanır.",
   rightsHolder:"Tim Baumann / Valkaama projesi (yönetmen ve yapımcı); öykü: Hendrik Behnisch",credit:"Tim Baumann / Valkaama projesi; öykü: Hendrik Behnisch",
@@ -170,38 +170,62 @@ function render(){
  empty.style.display=rows.length?'none':'block';
 }
 const player=document.getElementById('player'),video=document.getElementById('video'),quality=document.getElementById('quality'),playererror=document.getElementById('playererror');
+let activeHls=null;
 function addPendingLink(container,label,url){
  if(!url)return;
  const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=label;container.appendChild(a);
 }
+function stopActiveHls(){if(activeHls){activeHls.destroy();activeHls=null;}}
+function showPlayerError(message){playererror.textContent=message;playererror.classList.add('show')}
 function playTitle(item){
- player.classList.add('open');playererror.classList.remove('show');video.pause();video.removeAttribute('src');video.innerHTML='';quality.innerHTML='';quality.hidden=true;video.style.display='block';
- const sources=(item.sources||[]).filter(s=>s.url);
- if(!sources.length){video.style.display='none';playererror.textContent='Bu yapım için henüz doğrulanmış yayın kaynağı eklenmedi.';playererror.classList.add('show');return;}
- let activeSource=0, hls=null, frame=null;
- const clearMedia=()=>{if(hls){hls.destroy();hls=null;}if(frame){frame.remove();frame=null;}video.pause();video.removeAttribute('src');video.innerHTML='';};
- const showFailure=message=>{playererror.textContent=message;playererror.classList.add('show');};
- const startSource=(index)=>{
-  activeSource=index;clearMedia();playererror.classList.remove('show');
-  const s=sources[index];const type=(s.type||'').toLowerCase();const url=s.url;
-  if(s.kind==='embed'||type==='embed'||type==='iframe'){
-   video.style.display='none';frame=document.createElement('iframe');frame.src=url;frame.allow='autoplay; fullscreen; picture-in-picture; encrypted-media';frame.allowFullscreen=true;frame.referrerPolicy='strict-origin-when-cross-origin';frame.title=item.title+' video oynatıcı';frame.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:0;background:#000';player.insertBefore(frame,playerbar);return;
-  }
-  video.style.display='block';
-  (item.tracks||[]).forEach(t=>{const track=document.createElement('track');track.kind='subtitles';track.src=t.url;track.srclang=t.lang||'tr';track.label=t.label||'Türkçe';if(t.lang==='tr')track.default=true;video.appendChild(track)});
-  if(type.includes('mpegurl')||/\.m3u8(?:$|\?)/i.test(url)){
-   if(video.canPlayType('application/vnd.apple.mpegurl')){video.src=url;video.play().catch(()=>showFailure('HLS akışı otomatik başlamadı. Oynat düğmesine bas.'));}
-   else if(window.Hls&&Hls.isSupported()){hls=new Hls({enableWorker:true,lowLatencyMode:false});hls.loadSource(url);hls.attachMedia(video);hls.on(Hls.Events.MANIFEST_PARSED,()=>video.play().catch(()=>{}));hls.on(Hls.Events.ERROR,(_,data)=>{if(data.fatal)showFailure('HLS akışı açılamadı. Kaynak adresini, CORS ve yayın iznini kontrol etmek gerekiyor.');});}
-   else showFailure('Bu tarayıcı HLS akışını desteklemiyor.');
-  }else{const src=document.createElement('source');src.src=url;if(s.type&&s.type!=='video')src.type=s.type;video.appendChild(src);video.load();video.play().catch(()=>{});}
+ player.classList.add('open');playererror.classList.remove('show');video.pause();stopActiveHls();video.removeAttribute('src');video.innerHTML='';quality.innerHTML='';quality.hidden=true;video.style.display='block';
+ if(!item.hostedByZevora||!item.playbackVerified){
+  video.style.display='none';playererror.innerHTML='';
+  const h=document.createElement('h3');h.textContent=item.title;
+  const p=document.createElement('p');p.textContent=item.playbackStatus||'İçerik henüz ZEVORA depolamasına aktarılmadı veya oynatma testi tamamlanmadı.';
+  const meta=document.createElement('div');meta.className='pending-meta';meta.textContent=item.year+' · '+item.runtime+' · '+item.language+' · '+item.license+' · Hak sahibi: '+item.rightsHolder;
+  const sub=document.createElement('p');sub.textContent=(item.dub||'')+' '+(item.subtitles||'');
+  const links=document.createElement('div');links.className='pending-links';
+  addPendingLink(links,'Harici kaynak dosyası (ZEVORA\'ya yüklenmedi)',item.playbackSource||((item.sources||[])[0]||{}).url);
+  addPendingLink(links,'Lisans kanıtı',item.rightsUrl);
+  addPendingLink(links,'Hak sahibinin kaynağı',item.sourceUrl);
+  addPendingLink(links,'Afiş kaynağı',item.posterSource);
+  addPendingLink(links,'Lisans metni',item.licenseUrl);
+  if(item.tracks&&item.tracks.length)addPendingLink(links,'Türkçe altyazı dosyası',item.tracks.find(t=>t.lang==='tr')?.url||item.tracks[0].url);
+  playererror.append(h,p,meta,sub,links);playererror.classList.add('show');return;
+ }
+ const isDirectMedia=s=>{
+  if(!s||!s.url||s.kind==='embed'||s.type==='embed'||s.type==='iframe')return false;
+  if(/(?:youtube\.com|youtu\.be)/i.test(s.url))return false;
+  const type=(s.type||'').toLowerCase();
+  return ['video/mp4','video/webm','video/ogg','application/vnd.apple.mpegurl','application/x-mpegurl'].includes(type)||/\.(mp4|webm|ogg|m3u8)(?:$|\?)/i.test(s.url);
  };
- if(sources.length>1){sources.forEach((s,i)=>{const opt=document.createElement('option');opt.value=String(i);opt.textContent=s.label||('Kaynak '+(i+1));quality.appendChild(opt)});quality.hidden=false;quality.onchange=()=>startSource(Number(quality.value));}
- else quality.hidden=true;
+ const sources=(item.sources||[]).filter(isDirectMedia);
+ if(!sources.length){video.style.display='none';showPlayerError('ZEVORA oynatıcısı için doğrulanmış MP4, WebM, OGG veya HLS kaynağı bulunamadı. MKV ve gömülü oynatıcılar doğrudan yayın kaynağı olarak kullanılmaz.');return;}
+ const showPendingFailure=message=>showPlayerError(message);
+ const startSource=index=>{
+  stopActiveHls();video.pause();video.removeAttribute('src');video.innerHTML='';
+  const s=sources[index],url=s.url,type=(s.type||'').toLowerCase();
+  (item.tracks||[]).forEach(t=>{const track=document.createElement('track');track.kind='subtitles';track.src=t.url;track.srclang=t.lang||'tr';track.label=t.label||'Türkçe';if(t.lang==='tr')track.default=true;video.appendChild(track)});
+  const isHls=type.includes('mpegurl')||/\.m3u8(?:$|\?)/i.test(url);
+  if(isHls&&!video.canPlayType('application/vnd.apple.mpegurl')){
+   if(window.Hls&&Hls.isSupported()){
+    activeHls=new Hls({enableWorker:true,lowLatencyMode:false});
+    activeHls.loadSource(url);activeHls.attachMedia(video);
+    activeHls.on(Hls.Events.MANIFEST_PARSED,()=>video.play().catch(()=>showPendingFailure('HLS hazır; başlatmak için oynat düğmesine bas.')));
+    activeHls.on(Hls.Events.ERROR,(_,data)=>{if(data.fatal)showPendingFailure('HLS akışı açılamadı. Kaynak, CORS ve depolama izinlerini kontrol et.');});
+   }else showPendingFailure('Bu tarayıcı HLS akışını desteklemiyor.');
+   return;
+  }
+  video.src=url;video.load();video.play().catch(()=>showPendingFailure('Video başlatılamadı. Dosya biçimi veya kaynak erişimi desteklenmiyor olabilir.'));
+ };
+ sources.forEach((s,i)=>{const opt=document.createElement('option');opt.value=String(i);opt.textContent=s.label||('Kaynak '+(i+1));quality.appendChild(opt)});
+ quality.hidden=sources.length<2;quality.value='0';quality.onchange=()=>startSource(Number(quality.value));
  startSource(0);
 }
 video.addEventListener('error',()=>{if(player.classList.contains('open')&&video.style.display!=='none'){playererror.textContent='Video dosyası bu tarayıcıda açılamadı. ZEVORA oynatma testi tamamlanmış olarak işaretlenmedi.';playererror.classList.add('show')}});
-function closePlayer(){video.pause();const frame=player.querySelector('iframe');if(frame)frame.remove();video.removeAttribute('src');video.innerHTML='';video.style.display='';video.load();playererror.innerHTML='';playererror.classList.remove('show');player.classList.remove('open')}
-quality.addEventListener('change',()=>{const t=video.currentTime,wasPlaying=!video.paused;const source=video.querySelectorAll('source')[Number(quality.value)];if(!source)return;video.src=source.src;video.load();video.currentTime=t;if(wasPlaying)video.play().catch(()=>{})});
+function closePlayer(){video.pause();stopActiveHls();video.removeAttribute('src');video.innerHTML='';video.style.display='';video.load();playererror.innerHTML='';playererror.classList.remove('show');player.classList.remove('open')}
+
 document.getElementById('close').addEventListener('click',closePlayer);
 document.getElementById('full').addEventListener('click',()=>{if(!document.fullscreenElement){(player.requestFullscreen||player.webkitRequestFullscreen).call(player)}else{(document.exitFullscreen||document.webkitExitFullscreen).call(document)}});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&player.classList.contains('open')&&!document.fullscreenElement)closePlayer()});

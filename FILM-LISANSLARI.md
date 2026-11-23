@@ -1,6 +1,6 @@
 # ZEVORA — Lisans, hak sahibi ve yayın kaydı
 
-Son katalog kontrolü: 20 Kasım 2026.
+Son katalog kontrolü: 23 Kasım 2026.
 
 ## Gerçek ilerleme
 
@@ -113,7 +113,7 @@ Son katalog kontrolü: 20 Kasım 2026.
 
 Mevcut `wrangler.jsonc` yalnızca `./public` statik varlık dizinini tanımlıyor. Cloudflare R2 bucket veya Cloudflare Stream binding'i görünmüyor. Bu nedenle:
 
-1. Dört filmin dosyaları ZEVORA'ya yüklenmiş değildir.
+1. Beş yapımın dosyaları ZEVORA'ya yüklenmiş değildir.
 2. HLS paketleme, çoklu kalite ve ZEVORA alan adından video dağıtımı kurulmuş değildir.
 3. Harici dosya bağlantıları kayıtlıdır; bunlar ZEVORA'nın kendi barındırdığı dosya gibi sunulmaz.
 4. Oynatma testi tamamlanana kadar arayüz içerikleri "lisansı doğrulandı · oynatma testi bekliyor" olarak gösterir.
@@ -128,8 +128,40 @@ Bu çalışmada yeni bir dizi eklenmedi. Önceki araştırmada bulunan SideWays 
 
 ### Sita Sings the Blues (2008, 82 dk)
 
-Nina Paley film için CC0 feragati yayımlamıştır; ancak bazı müzik eserlerinin ayrı ve kısıtlayıcı lisansları olduğunu da belirtir. Müzik hakları ayrıca temizlenmeden doğrulanmış kataloğa eklenmez.
-Kaynak: https://www.sitasingtheblues.com/license.html
+Nina Paley, 18 Ocak 2013 tarihli resmî açıklamasında kendi film hakları için CC BY-SA lisansını CC0 ile değiştirdi. Ancak filmde kullanılan Annette Hanshaw kayıtlarının bazı ülkelerde ayrı komşu hakları 2030'a kadar sürebilir; bestelerin süresi ile ses kaydı hakları aynı değildir. Bu nedenle CC0 açıklaması tek başına tüm ses kayıtlarının dünya çapında yeniden yayınlanma hakkını kanıtlamaz. Müzik hakları ayrıca temizlenmeden doğrulanmış kataloğa eklenmez.
+- Hak sahibinin CC0 açıklaması: https://ninapaley.com/2013/01/18/ahimsa-sita-sings-the-blues-now-cc-0-public-domain/
+- Film ve müzik haklarının ayrımı: https://en.wikipedia.org/wiki/Sita_Sings_the_Blues
+
+### Der Geist der Biker (2010, 63 dk)
+
+Almanca yol belgeseli; yönetmen Stefan Kluge / VEB Film Leipzig. İkincil kaynaklar yapımın CC BY-SA ile ve ticari kullanıma izin verecek biçimde yayımlandığını bildiriyor. Ancak bu çalışmada hak sahibinin güncel resmî lisans metni ve ZEVORA'ya aktarılabilecek doğrudan tam film dosyası doğrulanamadı. Katalog sayısına eklenmedi.
+- Lisans ve indirme duyurusu: https://netzpolitik.org/2010/vebfilm-der-geist-der-biker/
+- Ticari yeniden kullanım bilgisi: https://www.kulturfalter.de/fileadmin/assets/img/KF_Mediadaten_Kulturfalter_23-07-2014.pdf
+- Süre, dil ve yönetmen: https://www.imdb.com/title/tt1588344/
+
+### The Cosmonaut / El Cosmonauta (2013, 104 dk)
+
+Riot Cinema'nın resmî proje sayfası filmin ve film müziğinin Attribution-ShareAlike koşullarıyla, ticari kullanım dahil serbestçe dağıtılabileceğini söylüyor. Ancak sayfa lisans sürümünü tam metinle tanımlamıyor ve güncel resmî indirme sayfasında tam film dosyası bulunmuyor. Bu nedenle lisans kanıtı güçlü olsa da doğrudan ZEVORA medya kaynağı tamamlanmadı; katalog sayısına eklenmedi.
+- Hak sahibinin lisans açıklaması: https://www.thecosmonaut.org/creative-commons/
+- Resmî indirme sayfası: https://www.thecosmonaut.org/descargas/
+- Yapım ve süre bilgisi: https://www.filmin.es/pelicula/el-cosmonauta
+
+### Route 66 – An American (bad) Dream (2004, 104 dk)
+
+Creative Commons kayıt sayfasında CC BY-NC-SA 2.0 olarak listeleniyor. NC koşulu reklam/gelir hedefiyle uyumsuz olduğu için eklenmedi.
+- Lisans kaydı: https://wiki.creativecommons.org/wiki/Route_66_-_An_American_%28bad%29_Dream
+
+### Boy Who Never Slept (2006)
+
+Tam film CC BY-NC-SA 2.5 lisanslı olarak duyurulmuş; NC koşulu nedeniyle eklenmedi. Kaynak dosyalarının ayrı CC BY lisansı, tam filmin lisansını değiştirmez.
+- Hak ve lisans duyurusu: https://www.pr.com/press-release/13293
+- Creative Commons duyurusu: https://creativecommons.org/2006/07/05/boywhoneversleptfilmandsourcefilesonline/
+
+### Digital Tipping Point
+
+Açık lisanslı ham röportaj görüntüleri yayımlanmış olsa da kaynaklar belgeseli yapım aşamasında bir proje olarak tanımlıyor; doğrulanmış, tamamlanmış tek bir uzun metraj sürümü bulunmadı. Ham görüntüler film kaydı olarak sayılmadı.
+- Creative Commons açıklaması: https://creativecommons.org/2008/11/19/digital-tipping-point/
+- Proje durumu: https://blog.p2pfoundation.net/the-digital-tipping-point-an-open-source-documentary/
 
 ## Hak kontrolü ilkesi
 
@@ -139,3 +171,10 @@ Kaynak: https://www.sitasingtheblues.com/license.html
 - Film, afiş, müzik ve altyazı hakları ayrı ayrı kontrol edilir.
 - Kısa film, fragman, klip, bölüm ve aynı filmin farklı çözünürlükleri 200 hedefine dahil edilmez.
 - Hiçbir kayıt, gerçek ZEVORA oynatma testi tamamlanmadan izlenebilir olarak işaretlenmez.
+
+
+## 23 Kasım 2026 araştırma sonucu
+
+- Mevcut beş kayıtla mükerrerlik kontrolü yapıldı; yeni hakları ve doğrudan yayın kaynağı birlikte doğrulanmış bir uzun metrajlı film/belgesel bulunmadığından bu çalışmada yeni kayıt eklenmedi.
+- Doğrulanmış toplam **5 / 200**; dağılım **4 belgesel + 1 kurmaca film**; özgün dil **3 İngilizce, 1 Ho, 1 Hollandaca**; Türkçe orijinal **0**, Türkçe dublaj **0**.
+- ZEVORA'da barındırılan ve gerçek oynatma testi tamamlanan kayıt **0**.
