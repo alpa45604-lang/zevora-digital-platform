@@ -1,6 +1,6 @@
 # ZEVORA — Lisans, hak sahibi ve yayın kaydı
 
-Son katalog kontrolü: 23 Kasım 2026.
+Son katalog kontrolü: 26 Kasım 2026.
 
 ## Gerçek ilerleme
 
@@ -178,3 +178,14 @@ Açık lisanslı ham röportaj görüntüleri yayımlanmış olsa da kaynaklar b
 - Mevcut beş kayıtla mükerrerlik kontrolü yapıldı; yeni hakları ve doğrudan yayın kaynağı birlikte doğrulanmış bir uzun metrajlı film/belgesel bulunmadığından bu çalışmada yeni kayıt eklenmedi.
 - Doğrulanmış toplam **5 / 200**; dağılım **4 belgesel + 1 kurmaca film**; özgün dil **3 İngilizce, 1 Ho, 1 Hollandaca**; Türkçe orijinal **0**, Türkçe dublaj **0**.
 - ZEVORA'da barındırılan ve gerçek oynatma testi tamamlanan kayıt **0**.
+
+## 26 Kasım 2026 araştırma sonucu
+
+- Mevcut katalog ve beş kayıtla mükerrerlik kontrolü yapıldı. Bu çalışmada lisans, tam eser ve yeniden dağıtım için gerekli kanıtların tamamı birlikte doğrulanmış yeni uzun metrajlı film/belgesel bulunmadı; **yeni kayıt: 0**.
+- **The Cosmonaut (2013)** yeniden incelendi. Hak sahibinin proje sayfası bütün projenin CC BY-SA 3.0 kapsamında ticari kullanım dahil dağıtılabileceğini söylüyor: https://www.thecosmonaut.org/proyecto/ ve lisansın tam metni: https://creativecommons.org/licenses/by-sa/3.0/. Ancak güncel resmî indirme sayfasında tam film dosyası değil, poster/grafik ve senaryo gibi proje materyalleri listeleniyor: https://www.thecosmonaut.org/descargas/. Bu nedenle ZEVORA'ya aktarılabilecek izinli tam film dosyası doğrulanana kadar kataloğa eklenmedi.
+- **Sita Sings the Blues (2008)** için yönetmen Nina Paley'nin CC0 açıklaması doğrulandı: https://ninapaley.com/2013/01/18/ahimsa-sita-sings-the-blues-now-cc-0-public-domain/. Ancak filmdeki üçüncü taraf ses kayıtlarının tüm bölgelerde yeniden dağıtım hakkını kapsayan ayrı ve açık bir hak kanıtı bulunmadı; bu belirsizlik giderilmeden kataloğa eklenmedi.
+- **Why We Cycle (2017)** için yapımcıların resmî sitesi Türkçe altyazı dahil altyazı seçeneklerini bildiriyor, ancak gösterim/yayın talepleri için yapımcıyla iletişim kurulmasını istiyor; ticari yeniden dağıtım veya tam dosyayı ZEVORA'da barındırma izni vermiyor: https://whywecycle.eu/. Vimeo On Demand sayfası da içeriğin ücretli sunulduğunu gösteriyor: https://vimeo.com/ondemand/whywecycle/402851169. Eklenmedi.
+- **TPB AFK (2013)** için bulunan tam film lisansı CC BY-NC-ND olarak tanımlanıyor; NC koşulu ticari hedefle, ND koşulu ise ZEVORA'nın gerekli uyarlama/altyazı/format işlemleriyle uyumsuz. Commons'ta doğrulanan dosya yalnızca fragman; fragman tam film sayılmaz. Eklenmedi.
+- Canlı Worker adresi bu çalışmada web erişim aracıyla okunamadı; tarayıcı denetimi de sağlayıcı bakiyesi yetersizliği nedeniyle başlatılamadı. Bu, sitenin kesin olarak kapalı olduğu anlamına gelmez. Cloudflare dağıtım durumu ve gerçek canlı katalog görünümü doğrulanamadı.
+- Mevcut doğrulanmış toplam **5 / 200**: **4 belgesel + 1 kurmaca film**. Özgün dil dağılımı: **3 İngilizce, 1 Ho, 1 Hollandaca**. Türkçe orijinal **0**, Türkçe dublaj **0**. ZEVORA depolamasında barındırılan ve uçtan uca oynatma testi tamamlanan kayıt **0 / 5**.
+- Cloudflare R2/Stream hesabı ve yükleme yetkisi bu çalışmada mevcut değildi. Video dosyaları ZEVORA'ya yüklenmedi; harici dosyalar ZEVORA oynatıcısında çalışıyormuş gibi gösterilmedi.
